@@ -2,7 +2,6 @@
 # CS596 Project
 
 echo CS596 Project
-echo Created by Norman Chau, Nathan Azoulay, Azamat Khafizou
 
 # STEP 1
 sudo airmon-ng
